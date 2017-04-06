@@ -17,6 +17,10 @@ Hero.prototype = {
 
   getHealth: function(){
     return this.health;
+  },
+
+  speak: function(){
+    return "My name is " + this.name;
   }
 
 }

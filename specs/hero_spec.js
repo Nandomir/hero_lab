@@ -22,5 +22,9 @@ describe('Hero tests', function() {
     assert.strictEqual(100, hero.getHealth())
   })
 
+  it('hero can say name', function(){
+    assert.strictEqual('My name is Winkelrod', hero.speak())
+  })
+
 
 })
