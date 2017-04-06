@@ -6,10 +6,12 @@ describe('Hero tests', function() {
   
   var hero;
   var food;
+  var favouriteFood;
 
   beforeEach(function() {
-    hero = new Hero('Winkelrod', 'Hagis')
+    hero = new Hero('Winkelrod', 'Haggis')
     food = new Food('Cake', 20)
+    favouriteFood = new Food('Haggis', 10)
   });
 
   it('hero has a name', function() {
@@ -17,7 +19,7 @@ describe('Hero tests', function() {
   });
 
   it('hero has favourite food', function() {
-    assert.strictEqual('Hagis', hero.getFavouriteFood())
+    assert.strictEqual('Haggis', hero.getFavouriteFood())
   });
 
   it('hero has health', function(){
@@ -42,6 +44,12 @@ describe('Hero tests', function() {
     hero.health -= 60;
     hero.eatFood(food);
     assert.strictEqual(60, hero.getHealth())
+  })
+
+  it('hero can get extra health from favourite food', function(){
+    hero.health -= 50;
+    hero.eatFood(favouriteFood);
+    assert.strictEqual(65, hero.getHealth());
   })
 
 })

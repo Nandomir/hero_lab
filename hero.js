@@ -24,14 +24,27 @@ Hero.prototype = {
     return "My name is " + this.name;
   },
 
-  eatFood: function(food){
-    if(this.health + food.getReplenishmentValue() > 100){
+  checkFavouriteFood: function(food){
+    var multiplier = 1;
+    if (food.name === this.favouriteFood.name) {
+        multiplier = 1.5;
+    }
+    return multiplier;
+  },
+
+  eatFood: function(passedFood){
+    var multiplier = this.checkFavouriteFood(passedFood);
+    console.log(multiplier)
+
+    var foodMultipliedValue = passedFood.getReplenishmentValue() * multiplier;
+
+    if(this.health + foodMultipliedValue > 100){
       this.health = 100;
     }
       else {
-        this.health += food.getReplenishmentValue()
+        this.health += foodMultipliedValue
       }
-  }
+  },
 
 }
 
