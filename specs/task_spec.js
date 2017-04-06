@@ -24,6 +24,10 @@ describe('Task tests', function(){
     assert.strictEqual("Now, really, right now, do it right now", task.getUrgency())
   })
 
+  it('check can get reward', function(){
+    assert.strictEqual("Sex", task.getReward())
+  })
+
 
 
 })

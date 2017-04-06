@@ -18,6 +18,10 @@ Task.prototype = {
 
   getUrgency: function(){
     return this.urgency;
+  },
+
+  getReward: function(){
+    return this.reward;
   }
 
 }
