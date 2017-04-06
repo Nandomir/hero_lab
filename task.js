@@ -10,6 +10,10 @@ Task.prototype = {
 
   getDescription: function(){
     return this.description;
+  },
+
+  getDifficulty: function(){
+    return this.difficulty;
   }
 
 }
