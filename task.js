@@ -14,6 +14,10 @@ Task.prototype = {
 
   getDifficulty: function(){
     return this.difficulty;
+  },
+
+  getUrgency: function(){
+    return this.urgency;
   }
 
 }
