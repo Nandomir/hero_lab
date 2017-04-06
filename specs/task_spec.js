@@ -32,5 +32,10 @@ describe('Task tests', function(){
     assert.strictEqual(false, task.getCompletion())
   })
 
+  it('can change completion status', function(){
+    task.completeTask()
+    assert.strictEqual(true, task.getCompletion())
+  })
+
 
 })

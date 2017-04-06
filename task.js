@@ -26,6 +26,10 @@ Task.prototype = {
 
   getCompletion: function(){
     return this.complete;
+  },
+
+  completeTask: function(){
+    this.complete = true;
   }
 
 
