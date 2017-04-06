@@ -15,6 +15,10 @@ Hero.prototype = {
     return this.favouriteFood;
   },
 
+  getHealth: function(){
+    return this.health;
+  }
+
 }
 
 module.exports = Hero;
