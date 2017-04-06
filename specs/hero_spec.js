@@ -26,5 +26,9 @@ describe('Hero tests', function() {
     assert.strictEqual('My name is Winkelrod', hero.speak())
   })
 
+  it('hero has collection of tasks', function(){
+    assert.strictEqual(0, hero.tasks.length)
+  })
+
 
 })
