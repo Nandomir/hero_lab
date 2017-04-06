@@ -9,6 +9,10 @@ Food.prototype = {
     return this.name;
   },
 
+  getReplenishmentValue: function() {
+    return this.replenishment;
+  }
+
 }
 
 
