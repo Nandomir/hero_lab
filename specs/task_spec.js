@@ -28,6 +28,9 @@ describe('Task tests', function(){
     assert.strictEqual("Sex", task.getReward())
   })
 
+  it('check can get completion', function(){
+    assert.strictEqual(false, task.getCompletion())
+  })
 
 
 })

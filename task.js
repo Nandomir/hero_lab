@@ -22,7 +22,13 @@ Task.prototype = {
 
   getReward: function(){
     return this.reward;
+  },
+
+  getCompletion: function(){
+    return this.complete;
   }
+
+
 
 }
 
